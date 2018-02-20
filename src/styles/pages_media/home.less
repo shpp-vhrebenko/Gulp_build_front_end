@@ -1,0 +1,110 @@
+/* Media Queries */
+/* max 768 */
+@media (max-width: @screen-xs-max) {
+    .categories__item {        
+        a {              
+            &:after {                
+                background-position: 130px 0;                
+            }       
+        }   
+    }
+}
+@media (max-width: 550px) {
+    .slider {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    .categories__item {
+        height: 120px;
+        a {
+            height: 120px;
+            &:after {
+                height: 120px;
+            }
+        }
+        .categories__info {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 551px) and (max-width: @screen-sm-max)  {
+    .slider {
+        height: 250px;
+        .item__img {
+            height: 200px;
+        }    
+    }
+
+    .carousel-inner {
+        height: 230px;
+        padding-bottom: 30px;
+        &:after {
+            bottom: 3%;
+        }
+    }
+
+    .categories__item {
+        height: 100px;
+        a {
+            height: 100px;
+            &:after {
+                height: 100px;
+            }
+        }
+        .categories__info {
+            font-size: 14px;
+        }
+    }
+}
+@media (min-width: @screen-sm-min) {
+    
+}
+/* min 767 to max 992 */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .categories__item {        
+        a {              
+            &:after {                
+                background-position: 100px 0;                
+            }       
+        }   
+    }
+}
+/* max 992 */
+@media (max-width: @screen-md-min) {
+    
+}
+
+/* max 992 */
+@media (min-width: @screen-md-min) {
+    .categories__item {        
+        a {              
+            &:after {                
+                background-position: 140px 0;                
+            }       
+        }   
+    }
+}
+
+/* min 991 to 1200 */
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .carousel-inner {
+        &:after {
+            bottom: 1%;
+        }
+    }
+}
+/* max 1200 */
+@media (min-width: @screen-md-max) {
+
+}
+/* min 1200 */
+@media (min-width: @screen-lg-min) {
+    .carousel-inner {
+        &:after {
+            bottom: 0%;
+        }
+    }
+}

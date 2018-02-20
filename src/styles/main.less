@@ -1,0 +1,65 @@
+@import "assets/_variables";
+@import "assets/_helpers";
+@import "assets/_mixins";
+@import "assets/_fonts";
+
+// @import "@{bootstrap}variables";
+// @import "@{bootstrap}mixins";
+// @import "@{bootstrap}responsive-utilities";
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    &:focus {
+        outline: none;
+    }
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0px;
+}
+
+html {
+  position: relative;
+}
+
+
+
+/* Pages import
+==============================*/
+@import "pages/layout";
+@import "pages/home";
+
+
+
+
+
+
+

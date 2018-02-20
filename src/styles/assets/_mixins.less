@@ -1,0 +1,93 @@
+/* hover overley block */
+.overlay(@color) {
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: @color;
+}
+.link-style-block(@color) {
+	&:hover {
+		background-color: @color;
+	}
+	&:active {
+		background-color: @color;
+	}
+	&:focus {
+		background-color: @color;
+	}
+	&:visited {
+		background-color: @color;
+	}
+}
+.link-style-text(@color) {
+	&:hover {
+		color: @color;
+	}
+	&:active {
+		color: @color;
+	}
+	&:focus {
+		color: @color;
+	}
+	&:visited {
+		color: @color;
+	}
+}
+
+.pretty-buttons(@color, @background, @color_text, @text-shadow: none) {
+	
+	color: @color_text;
+	#gradient > .vertical(lighten(@background, 5%), darken(@background, 5%), 0%, 100%);
+	border-color: darken(@background, 10%);
+	border-bottom-color: darken(@background, 20%);
+	text-shadow: @text-shadow;
+	.box-shadow(inset 0 1px 0 rgba(255, 255, 255, .1));
+	
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		#gradient > .vertical(darken(@background, 0), darken(@background, 10%), 0%, 100%);
+		border-color: darken(@background, 20%);
+		color: @color_text;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: darken(@background, 5%);
+		}
+	}
+}
+
+.simple-button(@bg_color, @color_text, @height, @width) {
+	display: block;
+	width: @width;
+	height: @height;
+	margin: 0 auto;
+	background-color: @bg_color;
+	color: @color_text;
+	border: none;
+	transition: all ease .3s;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-color: lighten(@bg_color, 10%);
+	}
+}

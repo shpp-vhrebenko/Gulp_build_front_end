@@ -1,0 +1,328 @@
+@screen-xs-min: 320px;
+//sm only from 320px to 768px
+@media(min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+   .footer__copyright {
+        .dvacom {
+            width: 215px;
+            paddint-right: 90px;
+            &:after {
+                right: -90px;
+            }
+        }
+    }      
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-default .navbar-toggle {
+        border: none;
+    }    
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: @base_color;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-collapse {
+        background-color: @base_white;
+        .navbar-nav__item {
+            height: auto; 
+            a {
+               cursor: pointer;
+               height: 40px;
+               line-height: 40px;
+               font-family: 'Open Sans', sans-serif;
+               font-weight: normal;
+               padding: 0;
+            }
+        }
+    }
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+        color: @base_color;
+        background-color: transparent;
+    }
+}
+
+//xs only < 768px
+@media(max-width: @screen-xs-max) {
+    
+}
+@media(min-width: 550px) and (max-width: @screen-xs-max)  {
+    .navbar-collapse {
+        margin-top: 130px;
+        .navbar-nav__item {
+            padding: 1rem;
+            a {
+                font-size: @base_lg_regular;
+                .link-style-text(@base_color); 
+            }
+        }
+    } 
+    .navbar-toggle {        
+        display: block;
+        position: absolute;
+        top: 46%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+    .navbar-toggle .icon-bar {
+        width: 30px;
+        height: 6px;
+        border-radius: 0px;
+    }
+    .header__phone {
+        display: none;
+    }
+}
+
+@media(max-width: 549px) {
+    .header {
+        height: 100px;
+    }
+    .header__logo {
+        a {
+            height: 50px;
+            width: 60%;
+        }
+    }
+    .header__contacts {
+        display: none;
+    }
+    .navbar-default {
+        height: 50px;
+        .navbar-collapse {
+            border-color: @base_white;
+        }
+    }
+    .navbar-collapse {
+        margin-top: 50px;
+        padding: 3rem;
+        .navbar-nav__item {
+            padding: 1rem 1rem 1rem 3rem;
+            a {
+                text-transform: uppercase;
+                font-size: @base_regular;
+                .link-style-text(@base_black);
+            }
+        }
+        
+    } 
+    .header__backet .nav li {
+        height: 50px;
+        padding-top: 0.5rem;
+    }
+    .header__phone {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 100px; 
+        height: 50px;
+        width: auto;
+        line-height: 50px;
+        font-size: 2rem;
+        i {
+            color: @base_lite_grey;
+        }
+        
+    }
+    .navbar-toggle {        
+        display: block;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .navbar-toggle .icon-bar {
+        width: 28px;
+        height: 4px;
+    }
+    .header__logo {
+        width: 100%;        
+    }
+    .header__menu {
+        width: 100%;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+
+//small and up > 768px
+@media(min-width: @screen-sm-min) {
+    
+}
+//sm only from 768px to 991px
+@media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {    
+    .footer__copyright {
+        .dvacom {
+            width: 30%;
+            padding-right: 0;
+        }
+    }    
+    .navbar-toggle {        
+        top: 46%;
+        left: 50%;       
+    }   
+}
+//md only from 768px to 1199px
+@media(min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+   .navbar-default {
+       .navbar-nav {
+            li {
+                height: 130px;              
+                padding-top: 4.5rem;                            
+                a {
+                    height: 40px;
+                    line-height: 40px;
+                    cursor: pointer;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: @base_regular;
+                    font-weight: normal;
+                    padding: 0rem 1rem;
+                    .link-style-text(@base_color);
+                    &:hover {
+                        cursor: pointer;                                                    
+                    }
+                    i {
+                        font-size: 2rem;
+                        padding: 0 .8rem;
+                    }
+                    span {
+                        border-left: 1px dashed @base_color;
+                        padding-left: .8rem;
+                    }
+                }
+                a.backet {
+                    padding: 0;
+                }
+                                
+                .dropdown-menu {
+                    background-color: #99dd44;
+                    li {
+                        height: 62px;
+                        a {
+                            line-height: 62px;
+                            .link-style-block(#88cc11);
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }   
+        .navbar-collapse {
+            background-color: transparent;
+            padding-right: 0px;
+            padding-left: 0px;      
+        }
+   }
+}
+//sm only from 320px to 1200px
+@media(min-width: @screen-xs-min) and (max-width: @screen-md-max) {    
+     .header__contacts {
+        line-height: 0px;
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-right: 0;        
+        ul {
+            li {
+                display: list-item;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+//md and up < 992px
+@media(max-width: @screen-md-min) {
+    .footer {
+        height: auto;
+    }
+    .footer__info {
+        padding-bottom: 3rem;
+        border-bottom: 1px solid @base_lite_color;
+    }
+    .footer__logo {
+        a {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .footer__contacts {
+        padding-top: 1rem;
+        p {
+            text-align: center;
+        }
+    }
+    .footer__description {
+        padding-top: 2rem;
+    }
+    .footer__copyright {
+        .copyright {
+            float: none;
+            text-align: center;
+        }
+        .dvacom {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+//md only from 992px to 1199px
+@media(min-width: @screen-md-min) and (max-width: @screen-md-max) {
+   
+}
+//lg and up > 1200px 
+@media(min-width: @screen-lg-min) {
+    .navbar-default {
+       .navbar-nav {
+            li {
+                height: 130px;              
+                padding-top: 4.5rem;                            
+                a {
+                    height: 40px;
+                    line-height: 40px;
+                    cursor: pointer;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: @base_regular;
+                    font-weight: normal;
+                    padding: 0rem 1rem;
+                    .link-style-text(@base_color);
+                    &:hover {
+                        cursor: pointer;                                                    
+                    }
+                    i {
+                        font-size: 2rem;
+                        padding: 0 .8rem;
+                    }
+                    span {
+                        border-left: 1px dashed @base_color;
+                        padding-left: .8rem;
+                    }
+                }
+                a.backet {
+                    padding: 0;
+                }
+                                
+                .dropdown-menu {
+                    background-color: #99dd44;
+                    li {
+                        height: 62px;
+                        a {
+                            line-height: 62px;
+                            .link-style-block(#88cc11);
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }   
+        .navbar-collapse {
+            background-color: transparent;
+            padding-right: 0px;
+            padding-left: 0px;      
+        }
+   }
+}
